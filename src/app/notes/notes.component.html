@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<h1 class="my-4 font-weight-bold text-center" style="font-size: 70px;">Notes for <span style="color: #9B5DE5;">{{
+        subjectName }}</span>
+</h1>
+<div *ngIf="notesList.length; else noData">
+    <div id="container" *ngFor="let notes of notesList">
+
+        <div class="product-details">
+
+            <h1>{{ notes.question }}</h1>
+
+
+            <p class="information">{{ notes.answer }}</p>
+
+
+
+
+
+        </div>
+
+        <div *ngIf="notes.subjectname == 'science'" class="product-image">
+            <img src="https://online.lk/wp-content/uploads/2022/11/OL-Science.jpg" alt="">
+        </div>
+        <div *ngIf="notes.subjectname == 'english'" class="product-image">
+            <img src="https://shutterstock.com/image-vector/english-language-learning-concept-vector-260nw-1827529367.jpg"
+                alt="">
+        </div>
+
+    </div>
+</div>
+
+<ng-template #noData>
+    <div class="text-center">
+        <img src="https://img.freepik.com/free-vector/no-data-concept-illustration_114360-536.jpg?w=2000" height="500"
+            alt="">
+    </div>
+</ng-template>
