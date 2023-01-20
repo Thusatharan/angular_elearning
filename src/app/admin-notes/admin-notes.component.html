@@ -3,24 +3,24 @@
     <div class="table-responsive" style="width: 100%; padding: 40px;">
         <div class="d-flex justify-content-between align-items-center">
             <h1 class="my-3 font-weight-bold text-center" style="font-size: 30px; ">Students List </h1>
-            <div class="btn btn-primary" (click)="goAddStudent()" style="max-height: 40px;" data-toggle="modal"
+            <div class="btn btn-primary" (click)="goAddNotes()" style="max-height: 40px;" data-toggle="modal"
                 data-target="#exampleModal"> Add
-                Student</div>
+                Note</div>
         </div>
 
         <table class="table table-striped w-100 border">
             <thead>
                 <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Age</th>
-                    <th scope="col">Grade</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Question</th>
+                    <th scope="col">Answer</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let student of studentsList">
-                    <td>{{ student.name }}</td>
-                    <td>{{ student.age }}</td>
-                    <td>{{ student.grade }}</td>
+                <tr *ngFor="let notes of notesList">
+                    <td>{{ notes.subjectname }}</td>
+                    <td>{{ notes.question }}</td>
+                    <td>{{ notes.answer }}</td>
                 </tr>
 
             </tbody>

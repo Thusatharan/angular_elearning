@@ -19,15 +19,13 @@ export class LoginComponent {
     this.studentService.login({ 'name': this.name, 'password': this.password }).subscribe({
       next: (response) => {
         console.log(response.data.name);
-        this.snackBar.open('Hello, world!', 'Dismiss', {
-          duration: 2000
-        });
         this._router.navigate(['/home']);
       },
       error: (error) => {
         console.error('Error!', error.error.message);
         this.snackBar.open('Hello, world!', 'Dismiss', {
-          duration: 2000
+          duration: 2000,
+          panelClass: 'my-custom-snackbar'
         });
       }
     }

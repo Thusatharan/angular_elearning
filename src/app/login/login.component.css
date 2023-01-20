@@ -1,0 +1,7 @@
+.my-custom-snackbar {
+    margin: 0 !important;
+    position: absolute;
+    right: 25px;
+    top: 60px;
+    z-index: 999;
+}
